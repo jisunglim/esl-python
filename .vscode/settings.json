@@ -1,0 +1,13 @@
+{
+    "python.condaPath": "D:\\programs\\Anaconda3\\Scripts",
+    "python.pythonPath": "D:\\programs\\Anaconda3\\envs\\py36\\python.exe",
+    "python.linting.pylintPath": "D:\\programs\\Anaconda3\\pkgs\\pylint-1.7.2-py36_0\\Scripts\\pylint.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.maxNumberOfProblems": 10,
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py"
+    ],
+    "python.dataScience.jupyterServerURI": "https://esl-python-notebooks.run.goorm.io/?token=bae1c60ca792b4aaf13b408fc7a8bde99245c3db342eaf5e"
+}
