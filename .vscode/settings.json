@@ -9,5 +9,5 @@
         ".vscode/*.py",
         "**/site-packages/**/*.py"
     ],
-    "python.dataScience.jupyterServerURI": "https://esl-python-notebooks.run.goorm.io/?token=bae1c60ca792b4aaf13b408fc7a8bde99245c3db342eaf5e"
+    "python.dataScience.jupyterServerURI": "https://esl-python-notebooks.run.goorm.io/?token=5828dfc34373a1f5d0fac42333cbbfe98eb7cd0ed564950b"
 }

@@ -5,7 +5,6 @@
 # - Shrinkage Methods
 # - Principal Component Regression
 # - Partial Least Square Regression
-
 #%%
 import math
 import pandas as pd
@@ -13,12 +12,14 @@ import scipy
 import scipy.stats
 import matplotlib.pyplot as plt
 
+
 #%%[markdown]
 # ## Data spec.
 # The data for this example come from a study by Stamey et al. (1989). They examined the correlation between the level of prostate-specific antigen and a number of clinical measures in men who were about to receive a radical prostatectomy.
 #%%
 data = pd.read_csv('./data/prostate/prostate.data', delimiter='\t', index_col=0)
 data.head(5)
+
 
 #%%[markdown]
 # A random vector $\mathrm{x}=(\mathrm{x}_1,...,\mathrm{x}_M)$ with a set of features $x \in \mathcal{X} \subset \mathbb{R}^M$ (with model size $M=8$)
@@ -34,6 +35,7 @@ data.head(5)
 x = data[['lcavol', 'lweight', 'age', 'lbph', 'svi', 'lcp', 'gleason', 'pgg45']]
 x.head(5)
 
+
 #%%[markdown]
 # A target random variable $\mathrm{y}$ with the value $y \in \mathcal{Y} \subset \mathbb{R}$
 # - `lpsa`: the level of prostate-specific antigen ($y$)
@@ -41,10 +43,20 @@ x.head(5)
 y = data[['lpsa']]
 y.head(5)
 
+
 #%%[markdown]
 # Given dataset is denoted by $S=((x_1,y_1),...,(x_N,y_N))$ (with size $N=97$).
 
 #%%[markdown]
-# ## 
+# Sample Covariance Matrix $\mathbb{S}$ is given by
+#%%
+S = x.corr()
+S
+#%%
+plt.matshow(S)
+#%%
+pd.plotting.scatter_matrix(data, figsize=(10,10))
+plt.show()
 
 
+#%%
